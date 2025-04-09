@@ -23,12 +23,49 @@
     </style>
 </head>
 <body>
-    <div class="container py-4">
-        <img width="156" height="40" src="./images/logo-quicklist.png" alt="Logotipo Quicklist" class="img-fluid d-block mx-auto">
-    </div>
+    <!-- Sprite de icones SVG -->
+    <svg xmlns="http://www.w3.org/2000/svg" style="display: none">
+        <symbol id="ico-voltar" viewBox="0 0 300 300">
+            <title>Arrow Back</title>
+            <path d="m71.7 168.8 105 105L150 300 0 150 150 0l26.7 26.3-105 105H300v37.5H71.7z"/>
+        </symbol>
+    </svg>
+    <!-- /Sprite de icones SVG -->
 
     <div class="container">
-        <a href="#">Voltar</a>
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <header class="py-4">
+                    <h1 class="mb-0"><img width="156" height="40" src="./images/logo-quicklist.png" alt="Logotipo Quicklist" class="img-fluid d-block mx-auto"></h1>
+                </header>
+
+                <main>
+                    <a href="#" class="d-inline-block mb-3"><svg class="me-1"><use href="#ico-voltar" /></svg>Voltar</a>
+                    <h2>Compras da semana</h2>
+
+                    <form id="add-item" class="d-sm-flex mb-4">
+                        <input type="text" name="item-name" id="item-name" class="form-control mb-3 mb-sm-0 me-sm-2" placeholder="Adicione um novo item">
+                        <input type="submit" value="Adicionar item" class="btn btn-send">
+                    </form>
+
+                    <ul id="items-list" class="items-list">
+                        <li class="item">
+                            <input type="checkbox"> <span class="item-name">Item name</span> 
+                            <button type="button" class="remove-item"></button>
+                        </li>
+                        <li class="item">
+                            <input type="checkbox"> <span class="item-name">Maecenas congue, ipsum et elementum ullamcorper, urna velit ultrices massa, in accumsan velit ligula id purus. Sed metus elit, blandit nec, ultrices id, scelerisque ultrices</span> 
+                            <button type="button" class="remove-item"></button>
+                        </li>
+                        <li class="item">
+                            <input type="checkbox"> <span class="item-name item-checked">Item name</span> 
+                            <button type="button" class="remove-item"></button>
+                        </li>
+                    </ul>
+
+                </main>
+            </div>
+        </div>
     </div>
 
 

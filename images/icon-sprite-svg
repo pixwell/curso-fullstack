@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none">
+    <symbol id="ico-voltar" viewBox="0 0 300 300">
+        <title>Arrow Back</title>
+        <path d="m71.7 168.8 105 105L150 300 0 150 150 0l26.7 26.3-105 105H300v37.5H71.7z"/>
+    </symbol>
+</svg>

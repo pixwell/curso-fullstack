@@ -14,6 +14,7 @@
 
 body{
     font: normal normal 400 16px/150% "Inter", sans-serif;
+    background-color: var(--lc-bg-primary);
 }
 
 h1, h2, h3, h4, h5, h6{

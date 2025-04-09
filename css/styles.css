@@ -1,0 +1,27 @@
+:root{
+    --lc-bg-primary: #F4F5FB;
+    --lc-bg-secondary: #FFFFFF;
+    --lc-color-brand: #CA3884;
+    --lc-color-brand-hover: #A52C6B;
+    --lc-color-danger: #C93847;
+    --lc-content-primary: #080B12;
+    --lc-content-secondary: #374151;
+    --lc-content-tertiary: #9CA3AF;
+    --lc-always-white: #FFFFFF;
+    --lc-border-primary: #D1D5DB;
+    --lc-border-hover: #B9C2D0;
+}
+
+body{
+    font: normal normal 400 16px/150% "Inter", sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6{
+    margin-bottom: 30px;
+    color: var(--lc-content-primary);
+}
+
+h1, h2{font-size: 2rem;} /*32px*/
+h3{font-size: 1.8rem;} /*28px*/
+h4{font-size: 1.5rem;} /*24px*/
+

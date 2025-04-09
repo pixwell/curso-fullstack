@@ -19,6 +19,7 @@ body{
 
 h1, h2, h3, h4, h5, h6{
     margin-bottom: 30px;
+    font-weight: bold;
     color: var(--lc-content-primary);
 }
 
@@ -26,12 +27,22 @@ h1, h2{font-size: 1.5rem;} /*24px*/
 h3{font-size: 1.3rem;} /*20px*/
 h4{font-size: 1rem;} /*16px*/
 
-a{
+a, 
+a svg{
     color: var(--lc-color-brand);
+    fill: var(--lc-color-brand);
     text-decoration: none;
     font-size: 0.9rem;
     transition: all 500ms;
 }
-a:hover{
+
+a:hover, 
+a:hover svg{
     color: var(--lc-color-brand-hover);
+    fill: var(--lc-color-brand-hover);
+}
+
+a svg{
+    width: 14px;
+    height: 14px;
 }

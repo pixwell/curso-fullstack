@@ -11,16 +11,6 @@
     <link rel="stylesheet" href="./css/bootstrap.min.css">
     <link rel="stylesheet" href="./css/styles.css">
     <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon">
-    <style>
-        .box1{background: #c4e6ff}
-        .box2{background: #ffc4e7}
-        .box3{background: #dcc4ff}
-        .box4{background: #c4d6ff}
-        .box5{background: #c4f5ff}
-        .box6{background: #c4ffe4}
-        .box7{background: #e3ffc4}
-        .box8{background: #fffec4}
-    </style>
 </head>
 <body>
     <!-- Sprite de icones SVG -->
@@ -48,7 +38,7 @@
                         <input type="submit" value="Adicionar item" class="btn btn-send">
                     </form>
 
-                    <ul id="items-list" class="items-list">
+                    <ul id="items-list" class="items-list mb-5">
                         <li class="item">
                             <input type="checkbox"> <span class="item-name">Item name</span> 
                             <button type="button" class="remove-item"></button>
@@ -62,6 +52,17 @@
                             <button type="button" class="remove-item"></button>
                         </li>
                     </ul>
+
+                    <div id="status">
+                        <div class="alert-error">
+                            <span class="alert-message">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Pellentesque est lorem, facilisis et, rhoncus a, lacinia non, metus. Donec commodo, risus nec rutrum tempus, tellus turpis sagittis nisi, ut scelerisque pede metus vitae mauris. In hac habitasse platea dictumst. Suspendisse luctus turpis in orci.</span> 
+                            <button type="button" class="close-item"></button>
+                        </div>
+                        <div class="alert-success">
+                            <span class="alert-message">Urna velit ultrices massa</span> 
+                            <button type="button" class="close-item"></button>
+                        </div>
+                    </div>
 
                 </main>
             </div>

@@ -22,7 +22,16 @@ h1, h2, h3, h4, h5, h6{
     color: var(--lc-content-primary);
 }
 
-h1, h2{font-size: 2rem;} /*32px*/
-h3{font-size: 1.8rem;} /*28px*/
-h4{font-size: 1.5rem;} /*24px*/
+h1, h2{font-size: 1.5rem;} /*24px*/
+h3{font-size: 1.3rem;} /*20px*/
+h4{font-size: 1rem;} /*16px*/
 
+a{
+    color: var(--lc-color-brand);
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: all 500ms;
+}
+a:hover{
+    color: var(--lc-color-brand-hover);
+}

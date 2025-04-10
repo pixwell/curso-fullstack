@@ -62,7 +62,9 @@ a svg{
     color: var(--lc-always-white);
 }
 
-.form-control{color: var(--lc-content-tertiary)}
+.form-control::placeholder{
+    color: var(--lc-content-tertiary);
+}
 
 .items-list{
     padding: 0;

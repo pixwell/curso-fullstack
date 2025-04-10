@@ -33,35 +33,23 @@
                     <a href="#" class="d-inline-block mb-3"><svg class="me-1"><use href="#ico-voltar" /></svg>Voltar</a>
                     <h2>Compras da semana</h2>
 
-                    <form id="add-item" class="d-sm-flex mb-4">
-                        <input type="text" name="item-name" id="item-name" class="form-control mb-3 mb-sm-0 me-sm-2" placeholder="Adicione um novo item">
+                    <form id="form-add-items" class="d-sm-flex mb-4">
+                        <input type="text" name="add-item" id="add-item" class="form-control mb-3 mb-sm-0 me-sm-2" placeholder="Adicione um novo item">
                         <input type="submit" value="Adicionar item" class="btn btn-send">
                     </form>
 
                     <ul id="items-list" class="items-list mb-5">
-                        <li class="item">
-                            <input type="checkbox"> <span class="item-name">Item name</span> 
-                            <button type="button" class="remove-item"></button>
-                        </li>
-                        <li class="item">
-                            <input type="checkbox"> <span class="item-name">Maecenas congue, ipsum et elementum ullamcorper, urna velit ultrices massa, in accumsan velit ligula id purus. Sed metus elit, blandit nec, ultrices id, scelerisque ultrices</span> 
-                            <button type="button" class="remove-item"></button>
-                        </li>
-                        <li class="item">
-                            <input type="checkbox"> <span class="item-name item-checked">Item name</span> 
-                            <button type="button" class="remove-item"></button>
-                        </li>
                     </ul>
 
                     <div id="status">
                         <div id="alert-error" class="alert-error d-none">
-                            <span class="alert-message"></span> 
-                            <button type="button" class="close-item"></button>
+                            <span class="alert-message">Item excluído</span> 
+                            <!-- <button type="button" class="close-item"></button> -->
                         </div>
 
                         <div id="alert-success" class="alert-success d-none">
-                            <span class="alert-message"></span> 
-                            <button type="button" class="close-item"></button>
+                            <span class="alert-message">Item adicionado com sucesso!</span> 
+                            <!-- <button type="button" class="close-item"></button> -->
                         </div>
                     </div>
 

@@ -24,6 +24,28 @@ body{
     background-repeat: no-repeat;
 }
 
+/* LINKS */
+a, 
+a svg{
+    color: var(--sort-color-brand);
+    fill: var(--sort-color-brand);
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: all 500ms;
+}
+
+a:hover, 
+a:hover svg{
+    color: var(--sort-color-brand-hover);
+    fill: var(--sort-color-brand-hover);
+}
+
+a svg{
+    width: 14px;
+    height: 14px;
+}
+
+/* TEXTO */
 h1, h2, h3, h4, h5, h6{
     margin-bottom: 30px;
     font-weight: 800;
@@ -77,22 +99,3 @@ h4{font-size: 1rem;} /*16px*/
 .label-medium{font-size: 1.25rem}
 .label-small{font-size: 1rem}
 
-a, 
-a svg{
-    color: var(--sort-color-brand);
-    fill: var(--sort-color-brand);
-    text-decoration: none;
-    font-size: 0.9rem;
-    transition: all 500ms;
-}
-
-a:hover, 
-a:hover svg{
-    color: var(--sort-color-brand-hover);
-    fill: var(--sort-color-brand-hover);
-}
-
-a svg{
-    width: 14px;
-    height: 14px;
-}

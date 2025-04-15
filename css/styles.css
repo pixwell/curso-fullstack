@@ -1,32 +1,81 @@
 :root{
-    --sort-bg-primary: #F4F5FB;
-    --sort-bg-secondary: #FFFFFF;
-    --sort-color-brand: #CA3884;
-    --sort-color-brand-hover: #A52C6B;
-    --sort-color-danger: #C93847;
-    --sort-color-success: #38c991;
-    --sort-content-primary: #080B12;
-    --sort-content-secondary: #374151;
-    --sort-content-tertiary: #9CA3AF;
-    --sort-always-white: #FFFFFF;
-    --sort-border-primary: #D1D5DB;
-    --sort-border-hover: #B9C2D0;
+    --sort-content-primary: #FFFFFF;
+    --sort-content-secondary: #C7C9CC;
+    --sort-content-tertiary: #D9D9D9;
+    --sort-content-brand: #C58DE7;
+    --sort-color-inverse: #030203;
+    --sort-background-primary: #020202;
+    --sort-background-secondary: #111012;
+    --sort-background-tertiary: #24222E;
+    --sort-background-brand: #C58DE7;
+    --sort-background-gray: #3D3D3D;
+    --sort-accent-pink: #D586E0;
+    --sort-accent-blue: #91A1FA;
+    --sort-accent-green: #77C0AF;
+    --sort-accent-lime: #D1DC97;
+    --sort-accent-red: #E9A9B3;
 }
 
 body{
-    font: normal normal 400 16px/150% "Inter", sans-serif;
-    background-color: var(--sort-bg-primary);
+    font: normal normal 400 16px/150% "Roboto Flex", sans-serif;
+    background-color: var(--sort-background-primary);
+    background-image: url("../images/shapes.png");
+    background-position: center bottom;
+    background-repeat: no-repeat;
 }
 
 h1, h2, h3, h4, h5, h6{
     margin-bottom: 30px;
-    font-weight: bold;
+    font-weight: 800;
+    font-family: "Sora", sans-serif;
     color: var(--sort-content-primary);
 }
 
 h1, h2{font-size: 1.5rem;} /*24px*/
 h3{font-size: 1.3rem;} /*20px*/
 h4{font-size: 1rem;} /*16px*/
+
+.title-large,
+.title-medium,
+.title-small{    
+    line-height: 130%;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.title-large{font-size: 4.5rem}
+.title-medium{font-size: 2.5rem}
+.title-small{
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.title-overline{
+    font-size: 1rem;
+    line-height: 150%;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.text-large,
+.text-medium,
+.text-small{
+    line-height: 150%;
+    font-weight: 500;
+}
+
+.text-large{font-size: 1rem}
+.text-medium{font-size: 0.875rem}
+.text-small{font-size: 0.75rem}
+
+.label-medium,
+.label-small{
+    line-height: 150%;
+    font-weight: 700;
+}
+
+.label-medium{font-size: 1.25rem}
+.label-small{font-size: 1rem}
 
 a, 
 a svg{

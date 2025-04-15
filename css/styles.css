@@ -19,9 +19,8 @@
 body{
     font: normal normal 400 16px/150% "Roboto Flex", sans-serif;
     background-color: var(--sort-background-primary);
-    background-image: url("../images/shapes.png");
-    background-position: center bottom;
-    background-repeat: no-repeat;
+    /* background-image: url("../images/shapes.png");
+    background-repeat: repeat-x; */
 }
 
 /* LINKS */

@@ -19,8 +19,7 @@
 body{
     font: normal normal 400 16px/150% "Roboto Flex", sans-serif;
     background-color: var(--sort-background-primary);
-    /* background-image: url("../images/shapes.png");
-    background-repeat: repeat-x; */
+    color: var(--sort-content-primary);    
 }
 
 /* LINKS */
@@ -46,7 +45,7 @@ a svg{
 
 /* TEXTO */
 h1, h2, h3, h4, h5, h6{
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     font-weight: 800;
     font-family: "Sora", sans-serif;
     color: var(--sort-content-primary);
@@ -98,3 +97,9 @@ h4{font-size: 1rem;} /*16px*/
 .label-medium{font-size: 1.25rem}
 .label-small{font-size: 1rem}
 
+/* CONTENT */
+
+.bg-shapes{
+    background-image: url("../images/shapes.png");
+    background-repeat: repeat-x;
+}

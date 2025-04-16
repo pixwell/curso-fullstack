@@ -188,14 +188,14 @@ h4{font-size: 1rem;} /*16px*/
 .sorteio-control input::-webkit-outer-spin-button,
 .sorteio-control input::-webkit-inner-spin-button {
   -webkit-appearance: none;
+  appearance: none;
   margin: 0;
 }
 
 /* Retirar a seta do input number - Firefox */
 .sorteio-control input[type=number] {
   -moz-appearance: textfield;
-}
-
+  appearance: textfield;
 }
 
 

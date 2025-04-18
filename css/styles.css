@@ -15,6 +15,7 @@
     --sort-accent-lime: #D1DC97;
     --sort-accent-red: #E9A9B3;
     --sort-gray-1: #3D3D3D;
+    --sort-radius: 8px;
 }
 
 body{
@@ -167,11 +168,12 @@ h4{font-size: 1rem;} /*16px*/
     font-weight: 700;
     background: var(--sort-background-secondary);
     border: 1px solid var(--sort-background-secondary);    
-    border-radius: 8px;
+    border-radius: var(--sort-radius);
     padding: 10px;
     text-align: center;
     color: var(--sort-content-primary);
     caret-color: var(--sort-content-primary);
+    transition: border 500ms ease-in-out;
 }
 
 .sorteio-control:hover input,
@@ -197,5 +199,44 @@ h4{font-size: 1rem;} /*16px*/
   -moz-appearance: textfield;
   appearance: textfield;
 }
+/* Reset */
+.form-check-input{
+    background-color: var(--sort-accent-pink);
+    height: 1.3em;
+}
+.form-check-input:checked {
+    background-color: var(--sort-accent-blue);
+    border-color: var(--sort-accent-blue);
+}
 
+.btn-rainbow{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    line-height: 150%;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--sort-content-primary);
+    background: var(--sort-background-secondary);
+    border: 1px solid var(--sort-background-secondary);
+    border-radius: var(--sort-radius);
+    padding: 18px;
+    transition: border 500ms ease-in-out;
+}
 
+.btn-rainbow:hover {
+    border: 1px solid transparent;
+    background: linear-gradient(var(--sort-background-secondary), var(--sort-background-secondary)) padding-box, linear-gradient(to right, var(--sort-accent-green) 0% ,  var(--sort-accent-lime) 14%,  var(--sort-accent-red) 32%,  var(--sort-accent-pink) 65%,  var(--sort-accent-blue) 85%) border-box;
+}
+
+.btn-rainbow svg{
+    width: 18px;
+    height: 18px;
+    fill: #FFFFFF;
+}
+
+.btn-rainbow:hover svg#cicle{
+    transform: scale(1.5);
+}

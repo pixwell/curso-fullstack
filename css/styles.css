@@ -101,10 +101,11 @@ h4{font-size: 1rem;} /*16px*/
 .label-medium{font-size: 1rem}
 
 @media(max-width: 575px){
-    .title-large{font-size: 2.5rem}
+    .title-large{font-size: 2rem}
 }
 
 /* CONTENT */
+
 
 .bg-shapes{
     background-image: url("../images/shapes.png");
@@ -157,6 +158,12 @@ h4{font-size: 1rem;} /*16px*/
     display: inline-block;
     width: 110px;
     margin-bottom: 20px;
+}
+
+@media(max-width: 424px){
+    .sorteio-control{
+        width: 100%;
+    }
 }
 
 .sorteio-control label{text-align: center}

@@ -115,6 +115,48 @@ h4{font-size: 1rem;} /*16px*/
     .title-large{font-size: 4.5rem}
 }
 
+/* ANIMACOES */
+/* Fade */
+@-webkit-keyframes fadeIn {
+    from {opacity: 0}
+    to {opacity: 1}
+}
+
+@keyframes fadeIn {
+    from {opacity: 0}
+    to {opacity: 1}
+}
+
+@-webkit-keyframes fadeOut {
+    from {opacity: 1}
+    to {opacity: 0}
+}
+
+@keyframes fadeOut {
+    from {opacity: 1}
+    to {opacity: 0}
+}
+
+.fade-in,
+.fade-out{
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+
+.fade-in{
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-name: fadeIn;
+    animation-name: fadeIn;
+}
+
+.fade-out{
+    -webkit-animation-duration: 600ms;
+    animation-duration: 600ms;
+    -webkit-animation-name: fadeOut;
+    animation-name: fadeOut;
+}
+
 /* POSICIONAMENTO */
 @media(min-width: 992px){
     #wrapper{
@@ -278,7 +320,6 @@ h4{font-size: 1rem;} /*16px*/
     fill: #FFFFFF;
 }
 
-/* ANIMACAO */
 @keyframes cicle {
     from {
         transform: rotate(0deg);

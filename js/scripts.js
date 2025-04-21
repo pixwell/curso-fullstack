@@ -31,6 +31,14 @@ function numerosSorteados(){
         ArrayRandomNumber.push(randomNumber);
     }
 
+    /*
+        PARA DECORAR
+        // Ordem crescente:
+        array.sort((a, b) => a - b);
+        // Ordem decrescente:
+        array.sort((a, b) => b - a);
+    */
+
     //Retorna um array em ordem crescente
     return ArrayRandomNumber.sort((a, b) => (a - b));
 }

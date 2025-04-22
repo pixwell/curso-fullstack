@@ -21,7 +21,7 @@
 body{
     font: normal normal 400 16px/150% "Roboto Flex", sans-serif;
     background-color: var(--sort-background-primary);
-    color: var(--sort-content-secondary);    
+    color: var(--sort-content-secondary); 
 }
 
 /* LINKS */
@@ -48,8 +48,9 @@ a svg{
 /* TEXTO */
 h1, h2, h3, h4, h5, h6{
     margin-bottom: 20px;
-    font-weight: 800;
+    font-variation-settings: 'wght' 800;
     font-family: "Sora", sans-serif;
+    line-height: 1;
     color: var(--sort-content-primary);
 }
 
@@ -61,21 +62,21 @@ h4{font-size: 1rem;} /*16px*/
 .title-medium,
 .title-small{    
     line-height: 130%;
-    font-weight: 800;
+    font-variation-settings: 'wght' 800;
     text-transform: uppercase;
 }
 
 .title-medium{font-size: 2.5rem}
 .title-small{
     font-size: 2rem;
-    font-weight: 700;
+    font-variation-settings: 'wght' 700;
 }
 
 .title-overline{
     font-family: "Roboto Flex", sans-serif;
     font-size: 1rem;
     line-height: 150%;
-    font-weight: 700;
+    font-variation-settings: 'wght' 700;
     text-transform: uppercase;
 }
 
@@ -93,7 +94,7 @@ h4{font-size: 1rem;} /*16px*/
 .label-large,
 .label-medium{
     line-height: 150%;
-    font-weight: 700;
+    font-variation-settings: 'wght' 700;
     text-transform: uppercase;
 }
 .label-large{font-size: 1.25rem}
@@ -175,10 +176,11 @@ h4{font-size: 1rem;} /*16px*/
     #ul-instrucoes{grid-area: left-bottom}
     #sorteio-container{grid-area: right}
 }
-
 #sorteio-container{
+    position: relative;
     display: flex;
     flex-direction: column;
+    align-items: center;
     justify-content: center;
 }
 
@@ -248,7 +250,7 @@ h4{font-size: 1rem;} /*16px*/
 .sorteio-control input{
     width: 100%;
     font-size: 2rem;
-    font-weight: 700;
+    font-variation-settings: 'wght' 700;
     background: var(--sort-background-secondary);
     border: 1px solid var(--sort-background-secondary);    
     border-radius: var(--sort-radius);
@@ -299,7 +301,7 @@ h4{font-size: 1rem;} /*16px*/
     justify-content: center;
     font-size: 1rem;
     line-height: 150%;
-    font-weight: 700;
+    font-variation-settings: 'wght' 700;
     text-transform: uppercase;
     color: var(--sort-content-primary);
     background: var(--sort-background-secondary);
@@ -337,4 +339,35 @@ h4{font-size: 1rem;} /*16px*/
     animation-iteration-count: 1;
     animation-timing-function: ease-in-out;
     animation-name: cicle;
+}
+
+.resultado-sorteio{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 0;
+    margin: 30px 0;
+    list-style: none;
+    transition: all 600ms ease;
+}
+
+.resultado-sorteio li{
+    padding: 20px 15px;
+    font-size: 3rem;
+    font-variation-settings: 'wght' 700;
+    color: var(--sort-content-brand);
+}
+
+.apresentacao{
+    position: absolute;
+    display: inline-block;
+    background-color: var(--sort-background-brand);
+    color: var(--sort-color-inverse);
+    border-radius: 30px;
+    padding: 12px 20px;
+    font-size: 3.5rem;
+    font-variation-settings: 'wght' 700;
+    line-height: 1;
+    text-transform: uppercase;
 }

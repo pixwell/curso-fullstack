@@ -160,8 +160,36 @@ h4{font-size: 1rem;} /*16px*/
         transform: translate3d(0, -100%, 0);
     }
 }
+@-webkit-keyframes fadeInUp {
+    from {
+        opacity: 0;
+        -webkit-transform: translate3d(0, 100%, 0);
+        transform: translate3d(0, 100%, 0);
+    }
+
+    to {
+        opacity: 1;
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        -webkit-transform: translate3d(0, 100%, 0);
+        transform: translate3d(0, 100%, 0);
+    }
+
+    to {
+        opacity: 1;
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+}
 
 .fade-in,
+.fade-in-up,
 .fade-out,
 .fade-out-up{
     -webkit-animation-fill-mode: forwards;
@@ -173,6 +201,13 @@ h4{font-size: 1rem;} /*16px*/
     animation-duration: 1s;
     -webkit-animation-name: fadeIn;
     animation-name: fadeIn;
+}
+
+.fade-in-up{
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-name: fadeInUp;
+    animation-name: fadeInUp;
 }
 
 .fade-out{

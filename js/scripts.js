@@ -1,10 +1,6 @@
-//Clonando o template
-const sorteioStarter_template = document.getElementById('sorteio-starter');
-const sorteioStarter_clone = sorteioStarter_template.content.cloneNode(true);
-
 //Criando a tela inicial com o formulario para o sorteio
 const sorteioContainer = document.getElementById('sorteio-container');
-sorteioContainer.append(sorteioStarter_clone);
+sorteioContainer.append(clonaTemplate('sorteio-starter'));
 
 //Segue o baile ...
 const form = document.getElementById('form-sorteio');
@@ -22,7 +18,15 @@ if (form) {
 
         //Carrega a lista de numeros sorteados
         await montaListaSorteada();
-    });    
+    });
+}
+
+/**
+ * Clona template HTML
+ * @param {String} id 'ID do container HTML'
+ */
+function clonaTemplate(id){
+    return document.getElementById(id).content.cloneNode(true);
 }
 
 /**
@@ -57,8 +61,9 @@ async function montaListaSorteada(){
         </g>
     </svg>`;
     btnSortearNovamente.classList.add('fade-in-up');
-
     sorteioContainer.appendChild(btnSortearNovamente);
+
+    btnSortearNovamente.addEventListener('click', () => carregaContainerStarter());
 }
 
 /**
@@ -114,6 +119,21 @@ function addNumerosNaLista(num){
         let eventoTerminado = new CustomEvent('addNumero_carregado');
         document.dispatchEvent(eventoTerminado);
     }, 3000);
+}
+
+function carregaContainerStarter(){
+    //Limpa o container
+    sorteioContainer.classList.add('fade-out');
+    
+    //Da o tempo para a animacao terminar
+    setTimeout(() => sorteioContainer.innerHTML = '', 900);
+
+    //inclui o template;
+    setTimeout(() => {
+        sorteioContainer.append(clonaTemplate('sorteio-starter'));    
+        sorteioContainer.classList.remove('fade-out');
+        sorteioContainer.classList.add('fade-in');
+    }, 950);
 }
 
 /**

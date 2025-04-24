@@ -269,6 +269,32 @@ h4{font-size: 1rem;} /*16px*/
     animation-name: zoomInDown;
 }
 
+/* Cicle */
+@keyframes cicle {
+    from {
+        transform: rotate(0deg);
+        fill: var(--sort-accent-red);
+    }
+    to {
+        transform: rotate(360deg);
+        fill: #FFFFFF;
+    }
+}
+
+.cicle{
+    transform-origin: center;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-iteration-count: 1;
+    animation-iteration-count: 1;
+    -webkit-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out;
+    -webkit-animation-name: cicle;
+    animation-name: cicle;
+}
+
 /* POSICIONAMENTO */
 @media(min-width: 992px){
     #wrapper{
@@ -432,17 +458,6 @@ h4{font-size: 1rem;} /*16px*/
     width: 25px;
     height: 25px;
     fill: #FFFFFF;
-}
-
-@keyframes cicle {
-    from {
-        transform: rotate(0deg);
-        fill: var(--sort-accent-red);
-    }
-    to {
-        transform: rotate(360deg);
-        fill: #FFFFFF;
-    }
 }
 
 .btn-rainbow:hover #cicle{

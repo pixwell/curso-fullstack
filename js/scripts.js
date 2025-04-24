@@ -17,13 +17,13 @@ if (form) {
 }
 
 /**
- * Adicina os numeros sorteador na
+ * Mosta a lista de numeros sorteados
  */
 async function montaListaSorteada(){    
     //Espera carregar o container principal
     await esperarEvento('containerSorteio_carregado');
 
-    //Carrega cada numero
+    //Carrega a lista sorteada
     const lista = arrNumerosSorteados();
 
     //Adiciona os numeros
@@ -34,9 +34,12 @@ async function montaListaSorteada(){
         await esperarEvento('addNumero_carregado');
     }
 
-    // === Dispara evento quando terminar ===
-    let eventoTerminado = new CustomEvent('numerosSorteados_carregado');
-    document.dispatchEvent(eventoTerminado);
+    //Adiciona o botao sortear novamente
+    let btnSortearNovamente = document.createElement('button');
+    btnSortearNovamente.setAttribute('type', 'submit');
+    btnSortearNovamente.classList.add('btn-rainbow');
+
+    sorteioContainer.appendChild(btnSortearNovamente);
 }
 
 /**
@@ -91,7 +94,7 @@ function addNumerosNaLista(num){
         // === Dispara evento quando o numero carregar ===
         let eventoTerminado = new CustomEvent('addNumero_carregado');
         document.dispatchEvent(eventoTerminado);
-    }, 2250);
+    }, 3000);
 }
 
 /**

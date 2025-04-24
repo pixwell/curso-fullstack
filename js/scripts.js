@@ -1,9 +1,17 @@
+//Clonando o template
+const sorteioStarter_template = document.getElementById('sorteio-starter');
+const sorteioStarter_clone = sorteioStarter_template.content.cloneNode(true);
+
+//Criando a tela inicial com o formulario para o sorteio
+const sorteioContainer = document.getElementById('sorteio-container');
+sorteioContainer.append(sorteioStarter_clone);
+
+//Segue o baile ...
 const form = document.getElementById('form-sorteio');
 const numQtd = document.getElementById('num-qtd');
 const numFrom = document.getElementById('num-de');
 const numTo = document.getElementById('num-ate');
 const numRepetir = document.getElementById('num-repetir');
-const sorteioContainer = document.getElementById('sorteio-container');
 
 if (form) {
     form.addEventListener('submit', async function(event) {
@@ -11,6 +19,7 @@ if (form) {
 
         //Carrega a secao que vai conter os numeros
         carregaContainerSorteio();
+
         //Carrega a lista de numeros sorteados
         await montaListaSorteada();
     });    

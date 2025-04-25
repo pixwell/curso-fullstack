@@ -468,6 +468,7 @@ h4{font-size: 1rem;} /*16px*/
     animation-name: cicle;
 }
 
+/* ul com a lista de numeros sorteados */
 .resultado-sorteio{
     display: flex;
     align-items: center;
@@ -486,6 +487,11 @@ h4{font-size: 1rem;} /*16px*/
     color: var(--sort-content-brand);
 }
 
+@media(max-width: 575px){
+    .resultado-sorteio li{min-height: 80px}
+}
+
+/* Container com a animacao */
 .apresentacao{
     position: absolute;
     align-self: center;

@@ -156,6 +156,23 @@ function carregaContainerSorteio(){
     //Da o tempo para a animacao terminar
     setTimeout(() => sorteioContainer.innerHTML = '', 800);
 
+    /* EXEMPLO DO HTML =======
+    <div id="sorteio-container" class="fade-in">
+        <h3 class="label-large mb-0 text-center">Resultado do sorteio</h3>
+        
+        <h4 class="title-overline text-center" id="subtitulo">
+            <span class="gradient-gray-text"><span>1</span>° resultado</span>
+        </h4>
+
+        <ul class="resultado-sorteio" id="resultado-sorteio">
+            <li>13</li>
+        </ul>
+
+        <!-- Container com a animacao -->
+        <div class="apresentacao d-none" id="apresentacao">13</div>
+    </div>
+    */
+
     //<h3 class="label-large mb-0 text-center">Resultado do sorteio</h3>
     let titulo = document.createElement('h3');
     titulo.classList.add('label-large','mb-0', 'text-center');

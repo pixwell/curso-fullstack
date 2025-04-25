@@ -1,24 +1,49 @@
 //Criando a tela inicial com o formulario para o sorteio
 const sorteioContainer = document.getElementById('sorteio-container');
 sorteioContainer.append(clonaTemplate('sorteio-starter'));
+ativarListenersIniciais();
 
 //Segue o baile ...
-const form = document.getElementById('form-sorteio');
 const numQtd = document.getElementById('num-qtd');
 const numFrom = document.getElementById('num-de');
 const numTo = document.getElementById('num-ate');
 const numRepetir = document.getElementById('num-repetir');
 
-if (form) {
-    form.addEventListener('submit', async function(event) {
+/**
+ * Ativa o Listener no formulario Starter
+*/
+function ativarListenersIniciais(){
+    const form = document.getElementById('form-sorteio');
+
+    //(?.) Optional chaining - Can I Use suporte de 95.23%
+    form?.addEventListener('submit', async function(event) {
         event.preventDefault();
 
         //Carrega a secao que vai conter os numeros
-        carregaContainerSorteio();
+        await carregaContainerSorteio();
 
         //Carrega a lista de numeros sorteados
         await montaListaSorteada();
-    });
+    }, { once: true });
+}
+
+/**
+ * Carrega a tela inicial
+ */
+function carregaContainerStarter(){
+    //Limpa o container
+    sorteioContainer.classList.add('fade-out');
+    
+    //Da o tempo para a animacao terminar
+    setTimeout(() => sorteioContainer.innerHTML = '', 900);
+
+    //inclui o template;
+    setTimeout(() => {
+        sorteioContainer.append(clonaTemplate('sorteio-starter'));    
+        sorteioContainer.classList.remove('fade-out');
+        sorteioContainer.classList.add('fade-in');
+        ativarListenersIniciais();
+    }, 950);
 }
 
 /**
@@ -49,29 +74,16 @@ async function montaListaSorteada(){
 
     //Adiciona o botao sortear novamente
     let btnSortearNovamente = document.createElement('button');
+    btnSortearNovamente.setAttribute('id', 'sortear-novamente');
     btnSortearNovamente.setAttribute('type', 'button');
     btnSortearNovamente.classList.add('btn-rainbow');
     btnSortearNovamente.classList.add('fade-in-up');
     btnSortearNovamente.textContent = 'Sortear Novamente';
     btnSortearNovamente.append(clonaTemplate('svg-cicle'));
+
     sorteioContainer.appendChild(btnSortearNovamente);
 
-    btnSortearNovamente.addEventListener('click', () => carregaContainerStarter());
-}
-
-function carregaContainerStarter(){
-    //Limpa o container
-    sorteioContainer.classList.add('fade-out');
-    
-    //Da o tempo para a animacao terminar
-    setTimeout(() => sorteioContainer.innerHTML = '', 900);
-
-    //inclui o template;
-    setTimeout(() => {
-        sorteioContainer.append(clonaTemplate('sorteio-starter'));    
-        sorteioContainer.classList.remove('fade-out');
-        sorteioContainer.classList.add('fade-in');
-    }, 950);
+    btnSortearNovamente.addEventListener('click', () => carregaContainerStarter(), {once: true});
 }
 
 /**
@@ -80,11 +92,17 @@ function carregaContainerStarter(){
  * @returns Object
  */
 function esperarEvento(nomeEvento) {
-    return new Promise(resolve => {
-        const handler = () => {
+    return new Promise((resolve, reject) => {
+        const handler = (event) => {
             document.removeEventListener(nomeEvento, handler);
-            resolve();
+            
+            try {                
+                resolve(event); // Tenta resolver
+            } catch (error) {
+                reject(error); // Se falhar, rejeita
+            }
         };
+
         document.addEventListener(nomeEvento, handler);
     });
 }

@@ -1,0 +1,10 @@
+node_modules/
+nbproject/
+.idea/
+/vendor/
+.vscode/
+error.log
+access.log
+package-lock.json
+cache/
+dashboard/demo

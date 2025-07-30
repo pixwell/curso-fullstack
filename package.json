@@ -1,5 +1,19 @@
 {
+  "name": "petshop",
+  "description": "Agendamento dos atendimentos do Petshop Mundo Pet",
+  "author": "Marcia Silva",
+  "scripts": {
+    "apiserver": "json-server --watch server.json --port 3333",
+    "babelbuild": "babel src/js -d dist/js",
+    "babelwatch": "babel src/js -d dist/js --watch"
+  },
   "dependencies": {
+    "dayjs": "^1.11.13",
     "json-server": "^1.0.0-beta.3"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.28.0",
+    "@babel/core": "^7.28.0",
+    "@babel/preset-env": "^7.28.0"
   }
 }

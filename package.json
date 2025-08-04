@@ -4,8 +4,8 @@
   "author": "Marcia Silva",
   "scripts": {
     "apiserver": "json-server --watch server.json --port 3333",
-    "babelbuild": "babel src/js -d dist/js",
-    "babelwatch": "babel src/js -d dist/js --watch"
+    "babelbuild": "babel js -d dist/js",
+    "babelwatch": "babel js -d dist/js --watch"
   },
   "dependencies": {
     "dayjs": "^1.11.13"

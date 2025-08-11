@@ -22,10 +22,154 @@
     <title>Mundo Pet</title>
   </head>
   <body>
-    <header class="site-logo">
+
+    <!-- Simbolos SVG -->
+    <svg xmlns="http://www.w3.org/2000/svg" style="display: none">
+      <symbol id="ico-calendar" fill="none" viewBox="0 0 20 20">
+          <title>calendar</title>
+          <path fill="#9282FA" fill-opacity=".4" d="M19.31 11.862V10c0-.781-.003-2.174-.015-2.793H.7C.687 7.827.69 9.219.69 10v1.862c0 3.511 0 5.266 1.091 6.357 1.09 1.091 2.846 1.091 6.357 1.091h3.724c3.511 0 5.267 0 6.357-1.09 1.091-1.092 1.091-2.847 1.091-6.358Z"/>
+          <path fill="#9282FA" d="M5.29.69c.387 0 .7.302.7.674v1.36c.622-.011 1.32-.011 2.104-.011h3.739c.784 0 1.48 0 2.102.011v-1.36c0-.372.314-.674.701-.674.388 0 .702.302.702.674v1.42c1.345.103 2.228.358 2.877.982.649.624.913 1.473 1.02 2.767l.075.674H.69v-.674c.108-1.294.372-2.143 1.021-2.767.65-.624 1.532-.879 2.878-.982v-1.42c0-.372.314-.674.7-.674Z"/>
+      </symbol>    
+      <symbol id="ico-sun" fill="none" viewBox="0 0 20 20">
+          <title>Sol</title>
+          <path fill="#9282FA" d="M3.288 16.062c0-.358.29-.65.65-.65h12.124a.65.65 0 0 1 0 1.3H3.938a.65.65 0 0 1-.65-.65ZM4.154 10c0 1.02.262 1.98.721 2.815h10.25A5.846 5.846 0 1 0 4.155 10Z"/>
+          <path fill="#9282FA" fill-opacity=".4" fill-rule="evenodd" d="M5.886 18.66c0-.358.291-.649.65-.649h6.928a.65.65 0 1 1 0 1.299H6.536a.65.65 0 0 1-.65-.65ZM10 .69c.359 0 .65.29.65.65v.866a.65.65 0 0 1-1.3 0v-.867c0-.358.291-.65.65-.65ZM.69 10c0-.359.29-.65.65-.65h.866a.65.65 0 0 1 0 1.3H1.34A.65.65 0 0 1 .69 10Zm16.455 0c0-.359.29-.65.65-.65h.865a.65.65 0 1 1 0 1.3h-.866a.65.65 0 0 1-.65-.65ZM4.875 12.815H1.34a.65.65 0 1 0 0 1.299h17.32a.65.65 0 0 0 0-1.3H4.875Z" clip-rule="evenodd"/>
+          <path fill="#9282FA" d="M3.417 3.417a.65.65 0 0 1 .918 0l.34.34a.65.65 0 0 1-.918.918l-.34-.34a.65.65 0 0 1 0-.918ZM16.583 3.417a.65.65 0 0 1 0 .918l-.34.34a.65.65 0 1 1-.919-.918l.34-.34a.65.65 0 0 1 .919 0Z"/>
+      </symbol>    
+      <symbol id="ico-sun-2" fill="none" viewBox="0 0 20 20">
+          <title>Sol</title>
+          <path fill="#9282FA" d="M9.888 6.747a3.14 3.14 0 1 1-6.282 0 3.14 3.14 0 0 1 6.282 0Z"/>
+          <path fill="#9282FA" fill-rule="evenodd" d="M6.298.69c.372 0 .673.301.673.673v.449a.673.673 0 0 1-1.346 0v-.45c0-.37.302-.672.673-.672ZM2.333 2.333a.673.673 0 0 1 .952 0l.194.194a.673.673 0 1 1-.952.951l-.194-.194a.673.673 0 0 1 0-.951Zm7.93 0a.673.673 0 0 1 0 .952l-.193.193a.673.673 0 1 1-.952-.951l.194-.194a.673.673 0 0 1 .952 0ZM.69 6.298c0-.371.301-.673.673-.673h.449a.673.673 0 1 1 0 1.346h-.449a.673.673 0 0 1-.673-.673Zm2.789 2.82a.673.673 0 0 1 0 .952l-.194.194a.673.673 0 1 1-.952-.952l.194-.194a.673.673 0 0 1 .952 0Z" clip-rule="evenodd"/>
+          <path fill="#9282FA" fill-opacity=".4" d="M14.182 19.31c2.832 0 5.128-2.269 5.128-5.067 0-2.219-1.442-4.104-3.45-4.79-.286-2.532-2.458-4.5-5.096-4.5-2.832 0-5.128 2.268-5.128 5.067 0 .619.112 1.212.318 1.76a3.909 3.909 0 0 0-.745-.071c-2.124 0-3.846 1.702-3.846 3.8 0 2.1 1.722 3.801 3.846 3.801h8.973Z"/>
+      </symbol>    
+      <symbol id="ico-moon" fill="none" viewBox="0 0 20 20">
+          <title>moon</title>
+          <path fill="#9282FA" d="M10 19.31A9.31 9.31 0 0 0 19.31 10c0-.43-.646-.502-.869-.133a6.051 6.051 0 1 1-8.308-8.308c.369-.223.298-.869-.133-.869a9.31 9.31 0 0 0 0 18.62Z"/>
+          <path fill="#9282FA" fill-opacity=".4" d="M17.355.976a.45.45 0 0 0-.838 0l-.4 1.02a.45.45 0 0 1-.254.254l-1.016.403c-.38.15-.38.69 0 .84l1.016.402a.45.45 0 0 1 .254.255l.4 1.02a.45.45 0 0 0 .838 0l.4-1.02a.45.45 0 0 1 .254-.255l1.016-.402c.38-.15.38-.69 0-.84l-1.016-.403a.45.45 0 0 1-.253-.254l-.401-1.02ZM13.754 6.397a.45.45 0 0 0-.837 0l-.146.371a.45.45 0 0 1-.254.255l-.37.147c-.38.15-.38.69 0 .84l.37.147a.45.45 0 0 1 .254.254l.146.372a.45.45 0 0 0 .837 0l.146-.372a.45.45 0 0 1 .254-.254l.37-.147c.38-.15.38-.69 0-.84l-.37-.147a.45.45 0 0 1-.254-.255l-.146-.371Z"/>
+      </symbol>    
+  </svg>
+  <!-- /Simbolos SVG -->
+
+    <header class="site-logo mb-4">
       <img width="113" height="24" src="./images/logo-mundo-pet.svg" alt="Logo mundo Pet">
     </header> 
 
+    <div class="container">
+
+      <!-- Titulo com calendario -->
+      <div class="row mb-4 align-items-md-center">
+
+        <div class="col-md-8">
+          <h2>Sua agenda</h2>
+          <p class="mb-0">Aqui você pode ver todos os clientes e serviços agendados para hoje.</p>
+        </div>
+
+        <div class="col-md-4 d-md-flex justify-content-md-end">
+          <div class="select-icon">
+            <svg class="select-icon-icon"><use href="#ico-calendar" /></svg>
+            <input class="select-icon-input" type="date" id="date" name="date" required />
+          </div>
+        </div>
+
+      </div>
+      <!-- /Titulo com calendario -->
+
+      <!-- Horarios  -->
+      <div class="row">
+        <!-- Manha  -->
+        <div class="container-horarios mb-3">        
+          <div class="container-horarios-header">
+            <h2><svg><use href="#ico-sun" /></svg> Manhã</h2>          
+            <div>09h-12h</div>
+          </div>
+
+          <ul id="horario-manha" class="container-horarios-list">
+            <li>
+              <div class="container-horarios-horario">09:00</div>
+              <div class="container-horarios-nome">Thor/ Fernanda Costa</div>
+              <div class="container-horarios-servico">Vacinação</div>
+              <div class="container-horarios-acao">Remover agendamento</div>
+            </li>
+            <li>
+              <div class="container-horarios-horario">09:00</div>
+              <div class="container-horarios-nome">Thor/ Fernanda Costa</div>
+              <div class="container-horarios-servico">Vacinação</div>
+              <div class="container-horarios-acao">Remover agendamento</div>
+            </li>
+            <li>
+              <div class="container-horarios-horario">09:00</div>
+              <div class="container-horarios-nome">Thor/ Fernanda Costa</div>
+              <div class="container-horarios-servico">Vacinação</div>
+              <div class="container-horarios-acao">Remover agendamento</div>
+            </li>
+          </ul>
+        </div>
+        <!-- /Manha  -->
+
+        <!-- Tarde  -->
+        <div class="container-horarios mb-3">
+          <div class="container-horarios-header">
+            <h2><svg><use href="#ico-sun-2" /></svg> Tarde</h2>          
+            <div>13h-18h</div>
+          </div>
+
+          <ul id="horario-tarde" class="container-horarios-list">
+            <li>
+              <div class="container-horarios-horario">13:00</div>
+              <div class="container-horarios-nome">Mel/ João Souza</div>
+              <div class="container-horarios-servico">Corte de unhas</div>
+              <div class="container-horarios-acao">Remover agendamento</div>
+            </li>
+            <li>
+              <div class="container-horarios-horario">13:00</div>
+              <div class="container-horarios-nome">Mel/ João Souza</div>
+              <div class="container-horarios-servico">Corte de unhas</div>
+              <div class="container-horarios-acao">Remover agendamento</div>
+            </li>
+            <li>
+              <div class="container-horarios-horario">13:00</div>
+              <div class="container-horarios-nome">Mel/ João Souza</div>
+              <div class="container-horarios-servico">Corte de unhas</div>
+              <div class="container-horarios-acao">Remover agendamento</div>
+            </li>
+          </ul>
+        </div>
+        <!-- /Tarde  -->
+
+        <!-- Noite  -->
+        <div class="container-horarios mb-3">
+          <div class="container-horarios-header">
+            <h2><svg><use href="#ico-moon" /></svg> Noite</h2>          
+            <div>19h-21h</div>
+          </div>
+
+          <ul id="horario-noite" class="container-horarios-list">
+            <li>
+              <div class="container-horarios-horario">20:00</div>
+              <div class="container-horarios-nome">Max/ Camila Santos</div>
+              <div class="container-horarios-servico">Aplicação de Anti-pulgas</div>
+              <div class="container-horarios-acao">Remover agendamento</div>
+            </li>
+            <li>
+              <div class="container-horarios-horario">20:00</div>
+              <div class="container-horarios-nome">Max/ Camila Santos</div>
+              <div class="container-horarios-servico">Aplicação de Anti-pulgas</div>
+              <div class="container-horarios-acao">Remover agendamento</div>
+            </li>
+            <li>
+              <div class="container-horarios-horario">20:00</div>
+              <div class="container-horarios-nome">Max/ Camila Santos</div>
+              <div class="container-horarios-servico">Aplicação de Anti-pulgas</div>
+              <div class="container-horarios-acao">Remover agendamento</div>
+            </li>
+          </ul>
+        </div>
+        <!-- /Noite  -->
+      </div>
+      <!-- /Horarios  -->
+
+    </div>
+    
     <script src="./js/bootstrap.bundle.js"></script>
     <script type="module" src="./dist/js/main.js"></script>
   </body>

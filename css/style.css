@@ -21,15 +21,19 @@
 }
 
 body{
-    font-family: "Inter Tight", sans-serif;
+    font-family: Inter, sans-serif;
+    font-size: 16px;
+    line-height: 24px;
     font-optical-sizing: auto;
     background: var(--background-secondary);
-    color: var(--content-primary);
+    color: var(--content-secondary);
 }
 
 /* Texto */
 h1, h2, h3, h4, h5, h6{
-    line-height: 130%;
+    font-family: "Inter Tight", sans-serif;
+    line-height: 32px;
+    font-weight: bold;
     color: var(--content-primary);
 }
 
@@ -45,9 +49,82 @@ h5, h6{font-size: 16px}
 .text-right{text-align: right !important}
 
 .site-logo{
-    position: fixed;
     display: inline-block;
     background: var(--background-tertiary);
     border-radius: 0 0 15px 0;
     padding: 15px;
+}
+
+/* Select com os horarios no cabecalho */
+.select-icon{
+    display: inline-block;
+    border: 1px solid var(--border-primary);
+    border-radius: 10px;
+    padding: 12px 16px;
+}
+
+.select-icon .select-icon-icon{
+    width: 20px;
+    height: 20px;
+}
+
+.select-icon .select-icon-input{
+    outline: none;
+    border: none;
+    background-color: transparent;
+    color: var(--content-secondary);
+}
+
+::-webkit-calendar-picker-indicator {
+  cursor: pointer;
+  background: transparent;
+  background-image: url("../images/icon-arrow-down.svg");
+  background-size: 18px 18px;
+  background-repeat: no-repeat;
+}
+
+/* Lista com os horarios */
+.container-horarios{
+    border-radius: 10px;    
+    background-color: var(--content-tertiary);
+    color: var(--content-secondary);
+}
+
+.container-horarios .container-horarios-header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 20px;
+    border-bottom: 1px solid var(--border-secondary);
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 24px;
+}
+
+.container-horarios .container-horarios-header h2,
+.container-horarios .container-horarios-header h3{
+    font-size: 18px;
+    margin-bottom: 0;
+    line-height: 24px;
+    font-weight: bold;
+}
+
+.container-horarios .container-horarios-header svg{
+    width: 22px;
+    height: 22px;
+    margin-right: 5px;
+}
+
+.container-horarios-list{
+    margin: 0;
+    padding: 0;
+}
+
+.container-horarios .container-horarios-list li{
+    display: flex;
+    border-bottom: 1px solid var(--border-secondary);
+}
+
+.container-horarios .container-horarios-list li:last-child{
+    border-bottom: 0;
 }

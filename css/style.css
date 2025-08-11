@@ -57,7 +57,7 @@ h5, h6{font-size: 16px}
 
 /* Select com os horarios no cabecalho */
 .select-icon{
-    display: inline-block;
+    width: 210px;
     border: 1px solid var(--border-primary);
     border-radius: 10px;
     padding: 12px 16px;
@@ -86,7 +86,7 @@ h5, h6{font-size: 16px}
 /* Lista com os horarios */
 .container-horarios{
     border-radius: 10px;    
-    background-color: var(--content-tertiary);
+    background-color: var(--background-tertiary);
     color: var(--content-secondary);
 }
 
@@ -95,7 +95,7 @@ h5, h6{font-size: 16px}
     align-items: center;
     justify-content: space-between;
     padding: 14px 20px;
-    border-bottom: 1px solid var(--border-secondary);
+    border-bottom: 1px solid var(--border-primary);
     font-size: 18px;
     font-weight: bold;
     line-height: 24px;
@@ -118,13 +118,47 @@ h5, h6{font-size: 16px}
 .container-horarios-list{
     margin: 0;
     padding: 0;
+    list-style: none;
 }
 
 .container-horarios .container-horarios-list li{
-    display: flex;
-    border-bottom: 1px solid var(--border-secondary);
+    border-bottom: 1px solid var(--border-primary);
+    padding: 5px 0;
 }
 
 .container-horarios .container-horarios-list li:last-child{
-    border-bottom: 0;
+    border-bottom: 0;    
 }
+.container-horarios-horario,
+.container-horarios-nome,
+.container-horarios-servico,
+.container-horarios-acao{
+    padding: 16px;
+}
+
+.container-horarios-acao a{
+    text-decoration: none;
+}
+
+@media(min-width: 992px){
+    .container-horarios .container-horarios-list li{
+        display: flex;
+    }
+    
+    .container-horarios-horario{
+        width: 10%;
+    }
+
+    .container-horarios-nome{
+        width: 35%;
+    }
+
+    .container-horarios-servico{
+        width: 30%;
+    }
+
+    .container-horarios-acao{
+        width: 25%;    
+    }
+}
+

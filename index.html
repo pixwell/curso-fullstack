@@ -55,118 +55,128 @@
     </header> 
 
     <div class="container">
-
+      
       <!-- Titulo com calendario -->
-      <div class="row mb-4 align-items-md-center">
+      <div class="row mb-4 justify-content-center">
+        <div class="col-xl-10 d-xl-flex align-items-center justify-content-between">
 
-        <div class="col-md-8">
-          <h2>Sua agenda</h2>
-          <p class="mb-0">Aqui você pode ver todos os clientes e serviços agendados para hoje.</p>
-        </div>
-
-        <div class="col-md-4 d-md-flex justify-content-md-end">
-          <div class="select-icon">
-            <svg class="select-icon-icon"><use href="#ico-calendar" /></svg>
-            <input class="select-icon-input" type="date" id="date" name="date" required />
+          <div class="mb-4">
+            <h2>Sua agenda</h2>
+            <p class="mb-0">Aqui você pode ver todos os clientes e serviços agendados para hoje.</p>
           </div>
-        </div>
 
-      </div>
-      <!-- /Titulo com calendario -->
+          <div class="mb-4 ps-xl-3">
+            <div class="select-icon">
+              <svg class="select-icon-icon"><use href="#ico-calendar" /></svg>
+              <input class="select-icon-input" type="date" id="date" name="date" required />
+            </div>
+          </div>
+
+        </div>
+      </div>  
+      <!-- /Titulo com calendario --> 
 
       <!-- Horarios  -->
-      <div class="row">
-        <!-- Manha  -->
-        <div class="container-horarios mb-3">        
-          <div class="container-horarios-header">
-            <h2><svg><use href="#ico-sun" /></svg> Manhã</h2>          
-            <div>09h-12h</div>
+      <div class="row mb-4 justify-content-center">
+        <div class="col-xl-10">          
+          <!-- Manha  -->
+          <div class="container-horarios mb-3">        
+            <div class="container-horarios-header">
+              <h2><svg><use href="#ico-sun" /></svg> Manhã</h2>          
+              <div>09h-12h</div>
+            </div>
+
+            <ul id="horario-manha" class="container-horarios-list">
+              <li>
+                <div class="container-horarios-horario box1">09:00</div>
+                <div class="container-horarios-nome box2">Thor/ Fernanda Costa</div>
+                <div class="container-horarios-servico box3">Vacinação</div>
+                <div class="container-horarios-acao box4"><a href="#">Remover agendamento</a></div>
+              </li>
+              <li>
+                <div class="container-horarios-horario box5">09:00</div>
+                <div class="container-horarios-nome box6">Thor/ Fernanda Costa</div>
+                <div class="container-horarios-servico box7">Vacinação</div>
+                <div class="container-horarios-acao box8"><a href="#">Remover agendamento</a></div>
+              </li>
+              <li>
+                <div class="container-horarios-horario box1">09:00</div>
+                <div class="container-horarios-nome box2">Thor/ Fernanda Costa</div>
+                <div class="container-horarios-servico box3">Vacinação</div>
+                <div class="container-horarios-acao box4"><a href="#">Remover agendamento</a></div>
+              </li>
+            </ul>
           </div>
+          <!-- /Manha  -->
 
-          <ul id="horario-manha" class="container-horarios-list">
-            <li>
-              <div class="container-horarios-horario">09:00</div>
-              <div class="container-horarios-nome">Thor/ Fernanda Costa</div>
-              <div class="container-horarios-servico">Vacinação</div>
-              <div class="container-horarios-acao">Remover agendamento</div>
-            </li>
-            <li>
-              <div class="container-horarios-horario">09:00</div>
-              <div class="container-horarios-nome">Thor/ Fernanda Costa</div>
-              <div class="container-horarios-servico">Vacinação</div>
-              <div class="container-horarios-acao">Remover agendamento</div>
-            </li>
-            <li>
-              <div class="container-horarios-horario">09:00</div>
-              <div class="container-horarios-nome">Thor/ Fernanda Costa</div>
-              <div class="container-horarios-servico">Vacinação</div>
-              <div class="container-horarios-acao">Remover agendamento</div>
-            </li>
-          </ul>
-        </div>
-        <!-- /Manha  -->
+          <!-- Tarde  -->
+          <div class="container-horarios mb-3">
+            <div class="container-horarios-header">
+              <h2><svg><use href="#ico-sun-2" /></svg> Tarde</h2>          
+              <div>13h-18h</div>
+            </div>
 
-        <!-- Tarde  -->
-        <div class="container-horarios mb-3">
-          <div class="container-horarios-header">
-            <h2><svg><use href="#ico-sun-2" /></svg> Tarde</h2>          
-            <div>13h-18h</div>
+            <ul id="horario-tarde" class="container-horarios-list">
+              <li>
+                <div class="container-horarios-horario">13:00</div>
+                <div class="container-horarios-nome">Mel/ João Souza</div>
+                <div class="container-horarios-servico">Corte de unhas</div>
+                <div class="container-horarios-acao"><a href="#">Remover agendamento</a></div>
+              </li>
+              <li>
+                <div class="container-horarios-horario">13:00</div>
+                <div class="container-horarios-nome">Mel/ João Souza</div>
+                <div class="container-horarios-servico">Corte de unhas</div>
+                <div class="container-horarios-acao"><a href="#">Remover agendamento</a></div>
+              </li>
+              <li>
+                <div class="container-horarios-horario">13:00</div>
+                <div class="container-horarios-nome">Mel/ João Souza</div>
+                <div class="container-horarios-servico">Corte de unhas</div>
+                <div class="container-horarios-acao"><a href="#">Remover agendamento</a></div>
+              </li>
+            </ul>
           </div>
+          <!-- /Tarde  -->
 
-          <ul id="horario-tarde" class="container-horarios-list">
-            <li>
-              <div class="container-horarios-horario">13:00</div>
-              <div class="container-horarios-nome">Mel/ João Souza</div>
-              <div class="container-horarios-servico">Corte de unhas</div>
-              <div class="container-horarios-acao">Remover agendamento</div>
-            </li>
-            <li>
-              <div class="container-horarios-horario">13:00</div>
-              <div class="container-horarios-nome">Mel/ João Souza</div>
-              <div class="container-horarios-servico">Corte de unhas</div>
-              <div class="container-horarios-acao">Remover agendamento</div>
-            </li>
-            <li>
-              <div class="container-horarios-horario">13:00</div>
-              <div class="container-horarios-nome">Mel/ João Souza</div>
-              <div class="container-horarios-servico">Corte de unhas</div>
-              <div class="container-horarios-acao">Remover agendamento</div>
-            </li>
-          </ul>
-        </div>
-        <!-- /Tarde  -->
+          <!-- Noite  -->
+          <div class="container-horarios mb-3">
+            <div class="container-horarios-header">
+              <h2><svg><use href="#ico-moon" /></svg> Noite</h2>          
+              <div>19h-21h</div>
+            </div>
 
-        <!-- Noite  -->
-        <div class="container-horarios mb-3">
-          <div class="container-horarios-header">
-            <h2><svg><use href="#ico-moon" /></svg> Noite</h2>          
-            <div>19h-21h</div>
+            <ul id="horario-noite" class="container-horarios-list">
+              <li>
+                <div class="container-horarios-horario">20:00</div>
+                <div class="container-horarios-nome">Max/ Camila Santos</div>
+                <div class="container-horarios-servico">Aplicação de Anti-pulgas</div>
+                <div class="container-horarios-acao"><a href="#">Remover agendamento</a></div>
+              </li>
+              <li>
+                <div class="container-horarios-horario">20:00</div>
+                <div class="container-horarios-nome">Max/ Camila Santos</div>
+                <div class="container-horarios-servico">Aplicação de Anti-pulgas</div>
+                <div class="container-horarios-acao"><a href="#">Remover agendamento</a></div>
+              </li>
+              <li>
+                <div class="container-horarios-horario">20:00</div>
+                <div class="container-horarios-nome">Max/ Camila Santos</div>
+                <div class="container-horarios-servico">Aplicação de Anti-pulgas</div>
+                <div class="container-horarios-acao"><a href="#">Remover agendamento</a></div>
+              </li>
+            </ul>
           </div>
-
-          <ul id="horario-noite" class="container-horarios-list">
-            <li>
-              <div class="container-horarios-horario">20:00</div>
-              <div class="container-horarios-nome">Max/ Camila Santos</div>
-              <div class="container-horarios-servico">Aplicação de Anti-pulgas</div>
-              <div class="container-horarios-acao">Remover agendamento</div>
-            </li>
-            <li>
-              <div class="container-horarios-horario">20:00</div>
-              <div class="container-horarios-nome">Max/ Camila Santos</div>
-              <div class="container-horarios-servico">Aplicação de Anti-pulgas</div>
-              <div class="container-horarios-acao">Remover agendamento</div>
-            </li>
-            <li>
-              <div class="container-horarios-horario">20:00</div>
-              <div class="container-horarios-nome">Max/ Camila Santos</div>
-              <div class="container-horarios-servico">Aplicação de Anti-pulgas</div>
-              <div class="container-horarios-acao">Remover agendamento</div>
-            </li>
-          </ul>
+          <!-- /Noite  -->         
         </div>
-        <!-- /Noite  -->
-      </div>
+      </div><!-- /.col-lg-8  -->
       <!-- /Horarios  -->
+
+      
+      <div class="row">
+        
+      </div>
+      
 
     </div>
     

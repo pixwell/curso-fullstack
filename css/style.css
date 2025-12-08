@@ -1,0 +1,38 @@
+:root{
+    --background-primary: #151515;
+    --background-secondary: #1E1E1E;
+    --background-tertiary: #23242C;
+    --background-brand: #9282FA;
+    --background-highlights: #BDB4FA;
+    --content-primary: #FFFFFF;
+    --content-secondary: #98959D;
+    --content-tertiary: #666666;
+    --content-brand: #9282FA;
+    --border-primary: #3E3C41;
+    --border-secondary: #86818C;
+    --border-brand: #9282FA;
+    --border-divisor: #353339;
+    --accent-blue: #027DF0;
+    --accent-blue-light: #16487A;
+    --accent-yellow: #F0DC02;
+    --accent-yellow-light: #756E1B;
+    --accent-orange: #F09102;
+    --accent-orange-light: #75501B;
+}
+
+body{
+    font-family: Inter, sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    font-optical-sizing: auto;
+    background: var(--background-secondary);
+    color: var(--content-secondary);
+}
+
+/* Texto */
+h1, h2, h3, h4, h5, h6{
+    font-family: "Inter Tight", sans-serif;
+    line-height: 32px;
+    font-weight: bold;
+    color: var(--content-primary);
+}

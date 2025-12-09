@@ -4,5 +4,8 @@ export default defineConfig({
   root: '.',
   server: {
     port: 5173
+  },
+  build: {
+    minify: false, // desativa minificação em producao
   }
 })

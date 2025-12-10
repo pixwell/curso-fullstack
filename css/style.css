@@ -25,6 +25,38 @@
     --default-border-radius: 10px;
 }
 
+@layer components {
+    .container { 
+        @apply w-full mx-auto px-4;
+    }
+
+  @screen sm { 
+        .container { 
+            @apply max-w-sm; 
+        }
+    }
+  @screen md { 
+        .container { 
+            @apply max-w-md; 
+        }
+    }
+  @screen lg { 
+        .container { 
+            @apply max-w-lg; 
+        }
+    }
+  @screen xl { 
+        .container { 
+            @apply max-w-xl; 
+        }
+    }
+  @screen 2xl { 
+        .container { 
+            @apply max-w-2xl;
+        }
+    }
+}
+
 body{
     font-family: Inter, sans-serif;
     font-size: 16px;
@@ -32,6 +64,12 @@ body{
     font-optical-sizing: auto;
     background: var(--background-secondary);
     color: var(--content-secondary);
+}
+
+a{
+    color: var(--content-brand);
+    text-decoration: none;
+    transition: all 0.5s ease;
 }
 
 /* Texto */
@@ -48,3 +86,4 @@ h1, h2, h3, h4, h5, h6{
     display: inline-block;
     border-radius: 0 0 var(--default-border-radius) 0;
 }
+

@@ -1,9 +1,11 @@
 @import "tailwindcss";
 
 :root{
+    --background-site: #14151D;
     --background-primary: #151515;
     --background-secondary: #1E1E1E;
     --background-tertiary: #23242C;
+    --background-quartiary: #2E2C30;
     --background-brand: #9282FA;
     --background-highlights: #BDB4FA;
     --content-primary: #FFFFFF;
@@ -20,6 +22,7 @@
     --accent-yellow-light: #756E1B;
     --accent-orange: #F09102;
     --accent-orange-light: #75501B;
+    --default-border-radius: 10px;
 }
 
 body{
@@ -37,4 +40,11 @@ h1, h2, h3, h4, h5, h6{
     line-height: 32px;
     font-weight: bold;
     color: var(--content-primary);
+}
+
+.site-logo{
+    padding: 12px 20px;
+    background: var(--background-quartiary);
+    display: inline-block;
+    border-radius: 0 0 var(--default-border-radius) 0;
 }

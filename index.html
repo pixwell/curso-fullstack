@@ -56,10 +56,18 @@
       <h1 class="my-0"><a href="/"><img width="113" height="24" src="./images/logo-mundo-pet.svg" alt="Logo mundo Pet"></a></h1>
     </header>
 
-    <div class="container box1">
-      <h2 class="text-2xl">Sua agenda</h2>
-      <p>Aqui você pode ver todos os clientes e serviços agendados para hoje.</p>
-      <input type="date" name="input-calendar" id="input-calendar" class="input-calendar">
+    <div class="container md:flex md:items-center md:justify-between">
+
+      <div class="mb-4">
+        <h2 class="text-2xl">Sua agenda</h2>
+        <p class="mb-0">Aqui você pode ver todos os clientes e serviços agendados para hoje.</p>
+      </div>
+
+      <div class="input-calendar-wrapper mb-4">
+        <svg width="18" height="18" class="mr-2"><use href="#ico-calendar"></svg>
+        <input type="date" name="input-calendar" id="input-calendar" class="input-calendar">
+      </div>
+
     </div>
 
     <script type="module" src="js/main.js"></script>
